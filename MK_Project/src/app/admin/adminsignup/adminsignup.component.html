@@ -1,1 +1,41 @@
-<p>adminsignup works!</p>
+
+<div class="adminpage">
+    <button mat-raised-button color="primary" (click)="enter()"> Open SignUp Form</button>
+    
+    <div class="container" *ngIf="showdata" >
+        <mat-card>
+        <mat-card-content>
+    <form>
+<mat-form-field class="content">
+    <mat-label>UserName</mat-label>
+    <input  matInput placeholder="Enter UserName">
+</mat-form-field><br><br>
+<mat-form-field class="content">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="Enter Password">
+</mat-form-field><br><br>
+<mat-form-field class="content">
+    <mat-label>ConfirmPassword</mat-label>
+    <input matInput placeholder="Enter ConfirmPassword">
+</mat-form-field><br><br>
+<mat-form-field class="content">
+    <mat-label>Mobile.Number</mat-label>
+    <input matInput placeholder="Enter Mobile Number">
+</mat-form-field><br><br>
+<mat-form-field class="content">
+    <mat-label>Email-Id</mat-label>
+    <input matInput placeholder="Enter Email">
+</mat-form-field><br>
+<mat-radio-group class="content" aria-label="Select an option">
+    <mat-radio-button value="1">Male</mat-radio-button>
+    <mat-radio-button value="2">Female</mat-radio-button>
+    <mat-radio-button value="3">Other</mat-radio-button>
+  </mat-radio-group><br>
+  <button class="content" mat-raised-button color="warn">Submit</button>
+</form>
+</mat-card-content>
+</mat-card>
+</div>
+
+
+</div>

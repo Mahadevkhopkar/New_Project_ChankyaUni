@@ -1,3 +1,22 @@
+<div class="form">
+    <h2 style="text-align: center;color: bisque; ">Login Form</h2>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>UserName</mat-label>
+            <input matInput placeholder="Enter UserName">
+        </mat-form-field><br><br>
 
-<button (click)="journey('adminlogin')">AdminLogin</button>
-<button (click)="journey('adminsignup')">AdminSignup</button>
+        <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input type="text" matInput placeholder="Enter Password">
+        </mat-form-field>&nbsp;
+        <a class="anchor" href="">Forgot Password</a><br><br>
+        <button class="submitbutton" mat-raised-button color="primary">Login</button>
+        <mat-list-item></mat-list-item>
+        <mat-divider></mat-divider>
+        <br><br>
+        <button class="adminsinup" mat-raised-button color="accent" (click)="journey()">AdminSignup</button>
+
+    </form>
+
+</div>

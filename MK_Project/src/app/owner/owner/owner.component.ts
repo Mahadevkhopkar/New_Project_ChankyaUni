@@ -11,7 +11,7 @@ constructor(private router : Router){}
 
 journey(journey:string){
   if(journey=== 'ownerlogin'){
-    this.router.navigateByUrl('owner/ownerLogin')
+    this.router.navigateByUrl('owner/ownersuccesspage')
   }
   else{
     this.router.navigateByUrl('owner/ownerSignup')

@@ -1,1 +1,49 @@
-<p>ownersignup works!</p>
+<div class="ownersignuppage">
+    <!-- <button mat-raised-button color="primary" (click)="enter()"> Open SignUp Form</button> -->
+
+    <!-- <div class="container" *ngIf="showdata"> -->
+        
+            <!-- <mat-card class="data">
+
+                <mat-card-content> -->
+                    <form [formGroup]="signupForm">
+
+                        <mat-form-field class="content">
+                            <mat-label>UserName</mat-label>
+                            <input matInput placeholder="Enter UserName" formControlName="name">
+                        </mat-form-field><br><br>
+                        <mat-form-field class="content">
+                            <mat-label>PAN Number</mat-label>
+                            <input matInput placeholder="Enter UserName" formControlName="panNumber">
+                        </mat-form-field><br><br>
+                        <mat-form-field class="content">
+                            <mat-label>Password</mat-label>
+                            <input matInput placeholder="Enter Password" formControlName="password">
+                        </mat-form-field><br><br>
+                        <mat-form-field class="content">
+                            <mat-label>ConfirmPassword</mat-label>
+                            <input matInput placeholder="Enter ConfirmPassword" formControlName="confirmpassword">
+                        </mat-form-field><br><br>
+                        <mat-form-field class="content">
+                            <mat-label>Mobile.Number</mat-label>
+                            <input matInput placeholder="Enter Mobile Number" formControlName="mobNumber">
+                        </mat-form-field><br><br>
+                        <mat-form-field class="content">
+                            <mat-label>Email-Id</mat-label>
+                            <input matInput placeholder="Enter Email" formControlName="email">
+                        </mat-form-field><br>
+                        <mat-form-field class="content">
+                            <mat-label>City</mat-label>
+                            <input matInput placeholder="Enter your City" formControlName="city">
+                        </mat-form-field><br>
+                        <mat-radio-group class="content" aria-label="Select an option" formControlName="gender">
+                            <mat-radio-button value="1">Male</mat-radio-button>
+                            <mat-radio-button value="2">Female</mat-radio-button>
+                            <mat-radio-button value="3">Other</mat-radio-button>
+                        </mat-radio-group><br>
+                        <button class="content" (click)="submitdata()" mat-raised-button color="warn">Submit</button>
+                    </form>
+                <!-- </mat-card-content>
+            </mat-card>
+     -->
+    </div>

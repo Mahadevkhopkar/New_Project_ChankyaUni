@@ -9,11 +9,8 @@ import { Router } from '@angular/router';
 export class AdminComponent {
 constructor(private router:Router){}
 
-journey( journey:string){
-     if(journey ==='adminlogin'){
-     this.router.navigateByUrl('admin/adminlogin')
-  }
-  else {
+journey( ){
+
     this.router.navigateByUrl('admin/adminsignup')
   }
 }
@@ -23,4 +20,4 @@ journey( journey:string){
 // signup(){
 // this.router.navigateByUrl('admin/sigadminsignupnup')
 // }
-}
+
