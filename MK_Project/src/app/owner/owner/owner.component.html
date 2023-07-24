@@ -1,2 +1,29 @@
-<button (click)="journey('ownersuccesspage')">OwnerLogIn</button>
-<button (click)="journey('ownersignup')">OwnerSignUp</button>
+
+
+        <div class="form">
+            <h2 style="text-align: center;color: bisque; ">Login Form</h2>
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                    <mat-label>UserName</mat-label>
+                    <input matInput placeholder="Enter UserName">
+                </mat-form-field><br><br>
+        
+                <mat-form-field class="example-full-width">
+                    <mat-label>Password</mat-label>
+                    <input type="text" matInput placeholder="Enter Password">
+                </mat-form-field><br>
+                <a class="anchor" href="">Forgot Password</a><br><br>
+                <button class="submitbutton" mat-raised-button color="primary" (click)="submit()">Login</button>
+                <mat-list-item></mat-list-item>
+                <mat-divider></mat-divider>
+                <br><br>
+                <button class="adminsinup" mat-raised-button color="accent" (click)="journey()">OwnerSignup</button>
+        
+            
+    </form>
+</div>
+
+
+
+
+

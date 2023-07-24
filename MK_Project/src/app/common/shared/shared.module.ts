@@ -14,6 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSliderModule} from '@angular/material/slider';
 import {ScrollingModule} from '@angular/cdk/scrolling';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [],
   imports: [
@@ -32,7 +33,8 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
     MatButtonModule,
     MatRadioModule,
     MatSliderModule,
-    ScrollingModule
+    ScrollingModule,
+    HttpClientModule
   ],
   exports:[
     MatCardModule,

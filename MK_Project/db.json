@@ -1,6 +1,37 @@
 {
   "admin": [],
-  "owner": [],
+  "owner": [
+    {
+      "UserName": "Mahadev8468",
+      "PanNumber": "DKFPK6004L",
+      "Password": "Mahadev@7744",
+      "MobNumber": "8390464055",
+      "Email": "khopkarmahadev@gmail.com",
+      "City": "kolhapur",
+      "Gender": "male",
+      "id": 1
+    },
+    {
+      "UserName": "ramesh",
+      "PanNumber": "PHFL98009L",
+      "Password": "ramesh33",
+      "MobNumber": "789797979879",
+      "Email": "ramesh33@gmail.com",
+      "City": "pune",
+      "Gender": "male",
+      "id": 2
+    },
+    {
+      "UserName": "reshma",
+      "PanNumber": "HJNB9877G",
+      "Password": "reshma33",
+      "MobNumber": "9890765590",
+      "Email": "reshma@gmial.com",
+      "City": "mumbai",
+      "Gender": "female",
+      "id": 3
+    }
+  ],
   "user": [],
-  "dataview":[]
+  "dataview": []
 }

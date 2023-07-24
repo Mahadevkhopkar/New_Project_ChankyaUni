@@ -9,12 +9,12 @@ import { Router } from '@angular/router';
 export class OwnerComponent {
 constructor(private router : Router){}
 
-journey(journey:string){
-  if(journey=== 'ownerlogin'){
-    this.router.navigateByUrl('owner/ownersuccesspage')
-  }
-  else{
+journey(){
+  
     this.router.navigateByUrl('owner/ownerSignup')
   }
-}
+  
+  submit(){
+    this.router.navigateByUrl('owner/ownersuccesspage')
+  }
 }

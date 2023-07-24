@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {FormGroup,FormBuilder } from '@angular/forms';
+import {FormGroup,FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CommonApiService } from 'src/app/common/common-api.service';
 import { CommonserviceService } from 'src/app/common/commonservice.service';
 
 @Component({
@@ -10,58 +11,72 @@ import { CommonserviceService } from 'src/app/common/commonservice.service';
 })
 export class OwnersignupComponent {
  
-  showdata:any;
-  signupForm!:FormGroup
-  getbyId: any;
+//   showdata:any;
+  signUp!:FormGroup;
+  journey:any
+  postapirespo: any;
+//   getbyId: any;
 
 
 
-constructor(private router:Router,private fb:FormBuilder,private commonservice:CommonserviceService){}
+constructor(private router:Router,private fb:FormBuilder,private commonservice:CommonserviceService,
+            private commonapiservice:CommonApiService){}
 
 ngOnInit(){
-  // this.getbyId=this.commonservice.journey
-  console.log('b.......', this.getbyId);
-  this.ownerpostdata()
+  this.journey = this.commonservice.journey;
+  console.log('b.......', this.journey);
+  this.formdata();
+  console.log('hhhhhh', this.formdata);
+  
   
 
+
+
 }
-
-
 // enter(){
 // this.showdata=!this.showdata
 // }
 
-ownerpostdata(){
-  this.signupForm=this.fb.group({
-    UserName:[],
-    PanNumber:[],
-    Password:[],
-    ConfirmPassword:[],
-    MobNumber:[],
-    Email:[],
-    City:[],
-    Gender:[],
+formdata(){
+  this.signUp=this.fb.group({
+    username:['',[]],
+    panNumber:['',[Validators.pattern("[a-zA-Z0-9]*$"),Validators.minLength(10),Validators.maxLength(10)]],
+    password:[''],
+    confimpassword:[''],
+    mobnumber:['',[Validators.pattern("[0-9]*$"),Validators.minLength(10),Validators.maxLength(10)]],
+    email:['',[Validators.required, Validators.email,Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
+    city:[''],
+    gender:[''],
 
 
 
 })
+
 }
 
 submitdata(){
-console.log('data...' , this.submitdata); 
-// this.commonservice.UserName=this.signupForm.value.name,
-// this.commonservice.PanNumber=this.signupForm.value.panNumber,
-// this.commonservice.PanNumber=this.signupForm.value.password,
-// this.commonservice.PanNumber=this.signupForm.value.confirmpasswprd,
-// this.commonservice.PanNumber=this.signupForm.value.mobNumber,
-// this.commonservice.PanNumber=this.signupForm.value.email,
-// this.commonservice.PanNumber=this.signupForm.value.city,
-// this.commonservice.PanNumber=this.signupForm.value.gender,
+ let request={
+  UserName:this.signUp.value.username,
+  PanNumber:this.signUp.value.panNumber,
+  Password:this.signUp.value.password,
+  ConfirmPassword:this.signUp.value.confirmpassword,
+  MobNumber:this.signUp.value.mobnumber,
+  Email:this.signUp.value.email,
+  City:this.signUp.value.city,
+  Gender:this.signUp.value.gender
+
+  
+
+ }
+ console.log(request);
+  this.commonapiservice.postApicall(this.journey,request).subscribe(result=>{
+    console.log('g.....', result);
+    this.postapirespo=result
+    
+  })
 
 
-
-
-  this.router.navigateByUrl('owner/ownersuccesspage')
+  this.router.navigateByUrl('owner')
+ }
 }
 
-}
