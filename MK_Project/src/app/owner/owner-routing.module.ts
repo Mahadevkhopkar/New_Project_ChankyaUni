@@ -7,6 +7,7 @@ import { OwnersuccesspageComponent } from './ownersuccesspage/ownersuccesspage.c
 
 const routes: Routes = [
   {path:'',component:OwnerComponent},
+  {path:'ownerhome', component:OwnerComponent},
   {path: 'ownersuccesspage', component:OwnersuccesspageComponent},
   {path: 'ownerSignup', component:OwnersignupComponent}
 ];

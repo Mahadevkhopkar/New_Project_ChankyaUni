@@ -7,4 +7,9 @@ export class CommonserviceService {
   journey!: string
  
   constructor() { }
+
+
+  toster(){
+    
+  }
 }

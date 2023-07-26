@@ -34,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatRadioModule,
     MatSliderModule,
     ScrollingModule,
-    HttpClientModule
+    HttpClientModule,
+  
   ],
   exports:[
     MatCardModule,

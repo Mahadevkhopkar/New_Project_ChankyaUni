@@ -15,6 +15,12 @@ export class OwnersignupComponent {
   signUp!:FormGroup;
   journey:any
   postapirespo: any;
+  passwordValue: any;
+  isMatch: boolean=false;
+  confirmPassValue: any;
+  strongPassword!: boolean;
+  Validators: any;
+  // mismatch:any
 //   getbyId: any;
 
 
@@ -27,8 +33,8 @@ ngOnInit(){
   console.log('b.......', this.journey);
   this.formdata();
   console.log('hhhhhh', this.formdata);
-  
-  
+  this.isMatch=this.signUp.value
+  // this.Validators= this.passwordMatchValidator
 
 
 
@@ -39,17 +45,15 @@ ngOnInit(){
 
 formdata(){
   this.signUp=this.fb.group({
-    username:['',[]],
+    username:['',[ Validators.pattern("[a-zA-Z]*")]],
     panNumber:['',[Validators.pattern("[a-zA-Z0-9]*$"),Validators.minLength(10),Validators.maxLength(10)]],
-    password:[''],
-    confimpassword:[''],
+    password:['' ,[Validators.required]],
+    confimpassword:['',[Validators.required,]],
     mobnumber:['',[Validators.pattern("[0-9]*$"),Validators.minLength(10),Validators.maxLength(10)]],
     email:['',[Validators.required, Validators.email,Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
     city:[''],
     gender:[''],
-
-
-
+   
 })
 
 }
@@ -78,5 +82,41 @@ submitdata(){
 
   this.router.navigateByUrl('owner')
  }
+ password() {
+  this.passwordValue = this.signUp.value.password;
+  if (this.passwordValue === this.confirmPassValue) {
+    this.isMatch = true;
+  }
+  else {
+    this.isMatch = false;
+  }
+  let pasLength = this.passwordValue.length;
+  if(pasLength > 10){
+    this.strongPassword =true;
+  }   
+}
+
+confirmPassword() {
+  this.confirmPassValue = this.signUp.value.confimpassword;
+  if (this.passwordValue === this.confirmPassValue) {
+    this.isMatch = true;
+  }
+  else {
+    this.isMatch = false;
+  }
+}
+back(){
+  this.router.navigateByUrl('owner/ownerhome')
+}
+// passwordMatchValidator() {
+//   let password = this.signUp.get('password').value;
+//   let confirmPassword = this.signUp.get('confirmpassword')?.value;
+
+//   if (password !== confirmPassword) {
+//     this.signUp.get('confirmpassword')?.value.errors({ mismatch: true });
+//   } else {
+//     this.signUp.get('confirmpassword')?.value.errors(null);
+//   }
+// }
 }
 

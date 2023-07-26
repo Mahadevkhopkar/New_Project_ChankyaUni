@@ -16,4 +16,8 @@ url=' http://localhost:3000/'
    return  this.httpclient.post(Url,data)
 
   }
+  getApicall(endpoint:string){
+   let url=this.url+endpoint;
+   return  this.httpclient.get(url)
+  }
 }

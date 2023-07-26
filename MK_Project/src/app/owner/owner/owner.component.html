@@ -1,27 +1,30 @@
 
+<div class="containe">
+       <button mat-raised-button color="primary" class="login-btn" (click)="click()">Click here</button>
 
-        <div class="form">
+        <div class="form" *ngIf="showform">
             <h2 style="text-align: center;color: bisque; ">Login Form</h2>
-            <form class="example-form">
+            <form class="example-form" [formGroup]="loginForm" >
                 <mat-form-field class="example-full-width">
                     <mat-label>UserName</mat-label>
-                    <input matInput placeholder="Enter UserName">
+                    <input matInput placeholder="Enter UserName" formControlName="name">
                 </mat-form-field><br><br>
         
                 <mat-form-field class="example-full-width">
                     <mat-label>Password</mat-label>
-                    <input type="text" matInput placeholder="Enter Password">
+                    <input type="text" matInput placeholder="Enter Password" formControlName="password">
                 </mat-form-field><br>
-                <a class="anchor" href="">Forgot Password</a><br><br>
-                <button class="submitbutton" mat-raised-button color="primary" (click)="submit()">Login</button>
+                <a class="anchor" href="" class= 'example-full-width'>Forgot Password</a><br><br>
+                <button class="submitbutton" mat-raised-button color="primary" (click)="submit()" class= 'example-full-width'>Login</button>
                 <mat-list-item></mat-list-item>
                 <mat-divider></mat-divider>
                 <br><br>
-                <button class="adminsinup" mat-raised-button color="accent" (click)="journey()">OwnerSignup</button>
+                <button class="adminsinup" mat-raised-button color="accent" (click)="ownersignupPage()" class= 'example-full-width'>OwnerSignup</button>
         
             
     </form>
 </div>
+</div> 
 
 
 
