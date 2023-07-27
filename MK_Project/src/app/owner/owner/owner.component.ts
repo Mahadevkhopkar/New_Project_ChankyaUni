@@ -12,7 +12,7 @@ import { CommonserviceService } from 'src/app/common/commonservice.service';
 export class OwnerComponent {
   loginForm!: FormGroup;
   endpoint!: string;
-  owenerdata: any;
+  owenerData: any;
   showform: any;
   validUser: boolean = false
   constructor(private router: Router,
@@ -37,9 +37,9 @@ export class OwnerComponent {
   }
   submit() {
     this.getowenerApidata();
-    console.log('this.owenerdata', this.owenerdata);
+    console.log('this.owenerData', this.owenerData);
 
-    if (this.owenerdata) {
+    if (this.owenerData) {
       this.isValidUser();
       if (this.validUser) {
         this.router.navigateByUrl('owner/ownersuccesspage')
@@ -54,7 +54,7 @@ export class OwnerComponent {
   getowenerApidata() {
     this.commonApiService.getApicall(this.endpoint).subscribe(response => {
       console.log("ghhh....", response);
-      this.owenerdata = response
+      this.owenerData = response
     })
   }
 
@@ -64,7 +64,7 @@ export class OwnerComponent {
   }
   isValidUser() {
 
-    this.owenerdata.forEach((element: any) => {
+    this.owenerData.forEach((element: any) => {
       if (element.UserName === this.loginForm.value.name && element.Password === this.loginForm.value.password) { 
         this.validUser = true;
       }

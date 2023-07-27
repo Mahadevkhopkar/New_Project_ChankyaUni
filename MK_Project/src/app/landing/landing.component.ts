@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonserviceService } from '../common/commonservice.service';
+import{BreakpointObserver,Breakpoints,BreakpointState} from '.angular/cdk/layout';
 
 @Component({
   selector: 'app-landing',
@@ -13,7 +14,7 @@ export class LandingComponent {
   clicked = false;
   data:any;
 constructor(private router:Router,
-            private commonserviceService:CommonserviceService){}
+            private commonserviceService:CommonserviceService,public responsive:BreakpointObserver){}
 //flag set for buttons//
 journey(journey:string){
 if(journey === 'admin'){

@@ -17,4 +17,6 @@ else{
   this.router.navigateByUrl('user/userSignup')
 }
 }
+
+
 }
