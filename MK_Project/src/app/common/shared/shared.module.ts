@@ -15,10 +15,13 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatSliderModule} from '@angular/material/slider';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { HttpClientModule } from '@angular/common/http';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    MatCheckboxModule,
     MatCardModule,
     MatToolbarModule,
     MatIconModule,
@@ -34,6 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatRadioModule,
     MatSliderModule,
     ScrollingModule,
+    MatGridListModule,
     HttpClientModule,
   
   ],
@@ -52,7 +56,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatRadioModule,
     MatSliderModule,
-    ScrollingModule
+    ScrollingModule,
+    MatGridListModule,
+    MatCheckboxModule,
 
    
   ]

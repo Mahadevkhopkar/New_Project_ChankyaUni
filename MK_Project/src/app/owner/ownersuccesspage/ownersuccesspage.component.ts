@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ownersuccesspage',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class OwnersuccesspageComponent {
 
+constructor( private router:Router){}
+
+
+
+
+
+  book(){
+    this.router.navigateByUrl('owner/hotelBooking')
+  }
 }
