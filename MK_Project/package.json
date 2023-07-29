@@ -11,7 +11,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.1.6",
-    "@angular/cdk": "^16.1.6",
+    "@angular/cdk": "^16.1.5",
     "@angular/common": "^16.0.0",
     "@angular/compiler": "^16.0.0",
     "@angular/core": "^16.0.0",
@@ -41,6 +41,7 @@
     "typescript": "~5.0.2"
   },
   "styles": [
+   
     "node_modules/ngx-toastr/toastr.css",
     "node_modules/bootstrap/dist/css/bootstrap.min.css"
   ]

@@ -43,5 +43,66 @@
     }
   ],
   "user": [],
-  "dataview": []
+  "Bookingdataview": [
+    {
+      "Name": "mahadev",
+      "lastName": "khopkar",
+      "Address": "porle",
+      "ChooseHotel": "Sayaji Hotel",
+      "RoomAvailable": "5",
+      "Menu": "southIndian",
+      "Payment": "AmezonPay",
+      "id": 1
+    },
+    {
+      "Name": "",
+      "lastName": "",
+      "Address": "",
+      "ChooseHotel": "",
+      "RoomAvailable": "",
+      "Menu": "",
+      "Payment": "",
+      "id": 2
+    },
+    {
+      "Name": "",
+      "lastName": "",
+      "Address": "",
+      "ChooseHotel": "",
+      "RoomAvailable": "",
+      "Menu": "",
+      "Payment": "",
+      "id": 3
+    },
+    {
+      "Name": "",
+      "lastName": "",
+      "Address": "",
+      "ChooseHotel": "",
+      "RoomAvailable": "",
+      "Menu": "",
+      "Payment": "",
+      "id": 4
+    },
+    {
+      "Name": "",
+      "lastName": "",
+      "Address": "",
+      "ChooseHotel": "",
+      "RoomAvailable": "",
+      "Menu": "",
+      "Payment": "",
+      "id": 5
+    },
+    {
+      "Name": "Mahadev",
+      "lastName": "khopkar",
+      "Address": "at -porle,tal -panhala dist-kolhapur",
+      "ChooseHotel": "Sayaji Hotel",
+      "RoomAvailable": "5",
+      "Menu": "nonVege",
+      "Payment": "PayTm",
+      "id": 6
+    }
+  ]
 }

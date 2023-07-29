@@ -17,10 +17,16 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+  
     MatCheckboxModule,
     MatCardModule,
     MatToolbarModule,
@@ -43,7 +49,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
   ],
   exports:[
     MatCardModule,
+    MatNativeDateModule,
     MatToolbarModule,
+    
+    MatDatepickerModule,
     MatIconModule,
     MatSidenavModule,
     MatDividerModule,

@@ -17,4 +17,7 @@ constructor( private router:Router){}
   book(){
     this.router.navigateByUrl('owner/hotelBooking')
   }
+  bookingdetails(){
+    
+  }
 }
