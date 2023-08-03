@@ -1,0 +1,26 @@
+.table-container{
+    margin-top: 30px;
+    margin-left: 50px;
+    top:10px;
+    
+    position: relative;
+    height: 211px;
+    width: 559px;
+    color: white;
+}
+    /* margin: 5px 8px; */
+
+table,th,tr,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 2px 2px;
+    text-align: center;
+    color:black;
+  
+}
+.successpage{
+    background-image:url('/assets/Images/Hotel_6.jpg') ;
+    height: 100%;
+    background-size: cover;
+   
+}

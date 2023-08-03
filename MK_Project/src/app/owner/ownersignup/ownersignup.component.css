@@ -41,7 +41,7 @@
   }
 
 .signupForm{
-    background-image: url('/assets/Images/Hotel_4.jpg');
+    background-color: palegreen;
     height: auto;
     background-size: cover;
     background-repeat: no-repeat;
@@ -55,8 +55,8 @@
     align-content: center;
 }
  form input{
-    background-color: brown;
-}
+    /* background-color: brown;
+} */}
 
 
 

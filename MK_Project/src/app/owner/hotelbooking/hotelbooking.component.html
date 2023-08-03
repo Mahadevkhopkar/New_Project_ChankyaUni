@@ -3,50 +3,50 @@ margin-left: 40%;">
   <ul class="list-group list-group-flush">
     <h1>Book Hotel</h1>
     <li class="list-group-item">
-      <form [formGroup]="bookingForm" >
-      <mat-form-field>
-        <mat-label>First name</mat-label>
-        <input matInput placeholder="Name" formControlName="name">
-      </mat-form-field>&nbsp;
-      <mat-form-field>
-        <mat-label> Last Name </mat-label>
-        <input matInput placeholder="Last Name"  formControlName="lastName">
-      </mat-form-field>
-      <mat-form-field class="example-full-width" >
-        <mat-label> address </mat-label>
-        <input matInput placeholder="address" formControlName="address">
-      </mat-form-field>&nbsp;
-      <mat-form-field>
-        <mat-label> Choose Hotel</mat-label>
-        <mat-select formControlName="chooseHotel">
-          <mat-option *ngFor="let hotel of HotelsName" [value]="hotel"  >
-            {{hotel}}
-          </mat-option>
-        </mat-select>
+      <form [formGroup]="bookingForm">
+        <mat-form-field>
+          <mat-label>First name</mat-label>
+          <input matInput placeholder="Name" formControlName="name">
+        </mat-form-field>&nbsp;
+        <mat-form-field>
+          <mat-label> Last Name </mat-label>
+          <input matInput placeholder="Last Name" formControlName="lastName">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label> address </mat-label>
+          <input matInput placeholder="address" formControlName="address">
+        </mat-form-field>&nbsp;
+        <mat-form-field>
+          <mat-label> Choose Hotel</mat-label>
+          <mat-select formControlName="chooseHotel">
+            <mat-option *ngFor="let hotel of HotelsName" [value]="hotel">
+              {{hotel}}
+            </mat-option>
+          </mat-select>
 
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label> Available Rooms</mat-label>
-        <input matInput placeholder="Ex. San Francisco"  formControlName="roomAvailable">
-      </mat-form-field>&nbsp;
-      <mat-form-field>
-        <mat-label>Foods</mat-label>
-        <mat-select [(value)]="selectVal" formControlName="menu">
-          <mat-option *ngFor=" let menu of Foods" [value]="menu"  >
-            {{menu}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Payments</mat-label>
-        <mat-select formControlName="payment">
-          <mat-option *ngFor=" let payment of Payments" [value]="payment">
-            {{payment}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <button (click)="submit()"> submit</button>
-    </form>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label> Available Rooms</mat-label>
+          <input matInput placeholder="Ex. roomAvailable" formControlName="roomAvailable">
+        </mat-form-field>&nbsp;
+        <mat-form-field>
+          <mat-label>Foods</mat-label>
+          <mat-select [(value)]="selectVal" formControlName="menu">
+            <mat-option *ngFor=" let menu of Foods" [value]="menu">
+              {{menu}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Payments</mat-label>
+          <mat-select formControlName="payment">
+            <mat-option *ngFor=" let payment of Payments" [value]="payment">
+              {{payment}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button (click)="submit()"> submit</button>
+      </form>
   </ul>
 
   <div class="card-footer">

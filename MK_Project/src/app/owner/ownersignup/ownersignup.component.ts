@@ -67,7 +67,7 @@ submitdata(){
   MobNumber:this.signUp.value.mobnumber,
   Email:this.signUp.value.email,
   City:this.signUp.value.city,
-  Gender:this.signUp.value.gender
+  Gender:this.signUp.value.gender,
 
   
 
@@ -81,6 +81,7 @@ submitdata(){
 
 
   this.router.navigateByUrl('owner')
+  
  }
  password() {
   this.passwordValue = this.signUp.value.password;

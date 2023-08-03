@@ -54,55 +54,36 @@
       "Payment": "AmezonPay",
       "id": 1
     },
+    
     {
-      "Name": "",
-      "lastName": "",
-      "Address": "",
-      "ChooseHotel": "",
-      "RoomAvailable": "",
-      "Menu": "",
-      "Payment": "",
-      "id": 2
-    },
-    {
-      "Name": "",
-      "lastName": "",
-      "Address": "",
-      "ChooseHotel": "",
-      "RoomAvailable": "",
-      "Menu": "",
-      "Payment": "",
-      "id": 3
-    },
-    {
-      "Name": "",
-      "lastName": "",
-      "Address": "",
-      "ChooseHotel": "",
-      "RoomAvailable": "",
-      "Menu": "",
-      "Payment": "",
-      "id": 4
-    },
-    {
-      "Name": "",
-      "lastName": "",
-      "Address": "",
-      "ChooseHotel": "",
-      "RoomAvailable": "",
-      "Menu": "",
-      "Payment": "",
-      "id": 5
-    },
-    {
-      "Name": "Mahadev",
+      "Name": "sagar",
       "lastName": "khopkar",
       "Address": "at -porle,tal -panhala dist-kolhapur",
       "ChooseHotel": "Sayaji Hotel",
       "RoomAvailable": "5",
       "Menu": "nonVege",
       "Payment": "PayTm",
-      "id": 6
+      "id": 2
+    },
+    {
+      "Name": "suresh",
+      "lastName": "patil",
+      "Address": "goa",
+      "ChooseHotel": "Orchid Hotel",
+      "RoomAvailable": "6",
+      "Menu": "southIndian",
+      "Payment": "PhonePay",
+      "id": 3
+    },
+    {
+      "Name": "ramesh",
+      "lastName": "patil",
+      "Address": "goa",
+      "ChooseHotel": "Orchid Hotel",
+      "RoomAvailable": "6",
+      "Menu": "southIndian",
+      "Payment": "PhonePay",
+      "id": 4
     }
   ]
 }

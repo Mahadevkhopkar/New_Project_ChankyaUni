@@ -1,16 +1,16 @@
 .form{
-    height: 500px;
+    height: 400px;
     width: 400px;
-    background-color: rgb(185, 31, 116);
+    background-color: rgb(31, 185, 185);
     margin: 20px;
-    margin-left: 20px;
+    margin-left: 30%;
     border-radius: 15px;
     
 }
 .example-full-width{
     
     margin-left: 20%;
-color:yellowgreen;
+color:rgb(205, 107, 50);
    
     
 }
@@ -40,4 +40,8 @@ color:yellowgreen;
     height: 50px;
     width: 80px;
     
+}
+.newSignUp{
+    margin-left: 20%;
+    color:rgb(205, 107, 50);
 }

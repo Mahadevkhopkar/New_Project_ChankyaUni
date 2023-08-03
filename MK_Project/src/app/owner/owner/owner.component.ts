@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { CommonApiService } from 'src/app/common/common-api.service';
 import { CommonserviceService } from 'src/app/common/commonservice.service';
 
@@ -14,10 +15,11 @@ export class OwnerComponent {
   endpoint!: string;
   owenerData: any;
   showform: any;
+  hide: boolean = true
   validUser: boolean = false
   constructor(private router: Router,
     private commonservice: CommonserviceService,
-    private commonApiService: CommonApiService, private formbuilder: FormBuilder) { }
+    private commonApiService: CommonApiService, private formbuilder: FormBuilder, private toastrservice: ToastrService) { }
 
   ngOnInit() {
     this.endpoint = this.commonservice.journey
@@ -36,6 +38,8 @@ export class OwnerComponent {
     })
   }
   submit() {
+
+
     this.getowenerApidata();
     console.log('this.owenerData', this.owenerData);
 
@@ -43,10 +47,13 @@ export class OwnerComponent {
       this.isValidUser();
       if (this.validUser) {
         this.router.navigateByUrl('owner/ownersuccesspage')
+        this.toastrservice.success('successfully loged')
       }
       else {
         this.router.navigateByUrl('owner/ownerhome')
+        this.toastrservice.error('Password Enter Worong')
       }
+
 
     }
 
@@ -65,18 +72,26 @@ export class OwnerComponent {
   isValidUser() {
 
     this.owenerData.forEach((element: any) => {
-      if (element.UserName === this.loginForm.value.name && element.Password === this.loginForm.value.password) { 
+      if (element.UserName === this.loginForm.value.name && element.Password === this.loginForm.value.password) {
         this.validUser = true;
       }
 
-      
+
     });
-    
+
   }
   click() {
-    this.showform = !this.showform
-
+    // this.showform = this.showform
+    this.router.navigateByUrl('landing')
   }
+forgotPassword(){
+  this.loginForm=this.formbuilder.group({
+    password:[],
+    confirmPassword:[]
+  })
+}
+submitbutton(){
 
+}
 }
 

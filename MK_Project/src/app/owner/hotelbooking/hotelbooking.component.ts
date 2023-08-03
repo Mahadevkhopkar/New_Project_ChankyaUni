@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonApiService } from 'src/app/common/common-api.service';
+import { CommonserviceService } from 'src/app/common/commonservice.service';
 
 
   
@@ -20,7 +21,7 @@ export class HotelbookingComponent {
   bookedhotel!: any;
   
 
-  constructor( private  fb :FormBuilder,private router:Router,private commonApiService:CommonApiService){}
+  constructor( private  fb :FormBuilder,private router:Router,private commonApiService:CommonApiService, private commonservice:CommonserviceService){}
 
 ngOnInit(){
 this.bookingFormData();
@@ -51,14 +52,15 @@ submit(){
  Menu:this.bookingForm.value.menu,
  Payment:this.bookingForm.value.payment
   }
+  
   let endpoint="Bookingdataview";
   
 this.commonApiService.postApicall(endpoint,request).subscribe(details=>{
 console.log('details.....',details);
 this.bookedhotel= details
 
-
 })
+
 if(this.bookedhotel){
   this.router.navigateByUrl('owner/ownersuccesspage')
   }

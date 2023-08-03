@@ -6,10 +6,7 @@ import { Injectable } from '@angular/core';
 export class CommonserviceService {
   journey!: string
  
-  constructor() { }
+  constructor( ) { }
 
 
-  toster(){
-    
-  }
 }

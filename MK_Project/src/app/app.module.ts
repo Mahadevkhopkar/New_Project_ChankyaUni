@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingComponent } from './landing/landing.component';
 import {MatCardModule} from '@angular/material/card';
 import { SharedModule } from './common/shared/shared.module';
-import { ToastrModule } from 'ngx-toastr';
+
 
 // import { OwnerModule } from './owner/owner.module';
 // import { UserModule } from './user/user.module';
@@ -21,10 +21,10 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    
+   
     MatCardModule,
     SharedModule,
-    ToastrModule
+    
 
    
    

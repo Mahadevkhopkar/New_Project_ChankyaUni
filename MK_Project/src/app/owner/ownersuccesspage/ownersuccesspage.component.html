@@ -1,5 +1,26 @@
-<div></div>
-<h1></h1>
+<div Class="successpage">
+
 <button mat-raised-button color="primary" (click)="book()">Hotel Booking</button>&nbsp;
 <button mat-raised-button color="accent">Hotel Details</button>
 <button mat-raised-button (click)="bookingdetails()" color="warn">Booking Details</button>
+<div *ngIf="showdata" >
+    <div *ngIf="bookingGetData" class="table-container">
+        <table>
+            <tr>
+                <th *ngFor='let heading of tableData'>{{heading}}
+
+                </th>
+            <tr *ngFor=" let tableData of bookingGetData">
+                <td>{{tableData.Name}}</td>
+                <td>{{tableData.lastName}}</td>
+                <td>{{tableData.Address}}</td>
+                <td>{{tableData.ChooseHotel}}</td>
+                <td>{{tableData.RoomAvailable}}</td>
+                <td>{{tableData.Menu}}</td>
+                <td>{{tableData.Payment}}</td>
+            </tr>
+
+        </table>
+    </div>
+    </div>
+</div>
