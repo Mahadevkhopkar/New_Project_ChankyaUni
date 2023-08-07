@@ -1,47 +1,60 @@
-.form{
+.form {
     height: 400px;
     width: 400px;
     background-color: rgb(31, 185, 185);
     margin: 20px;
     margin-left: 30%;
     border-radius: 15px;
-    
+
 }
-.example-full-width{
-    
+
+.example-full-width {
+
     margin-left: 20%;
-color:rgb(205, 107, 50);
-   
-    
+    cursor: pointer;
+
 }
-.submitbutton{
+
+.submitbutton {
     margin-left: 30px;
 }
 
- 
-   
-    
+Forgot {
+    margin-left: 20%;
+    color: rgb(205, 107, 50);
+    cursor: pointer;
 
-.adminsinup{
+}
+
+
+
+
+
+.adminsinup {
     margin-left: 30px;
     padding: 27px;
 }
+
 .containe {
     background-image: url('/assets/Images/hotel_3.jpg');
     height: 100%;
     background-size: cover;
     border-radius: 2px;
 }
-.login-btn{
+
+.login-btn {
     margin-top: 20px;
     margin-left: 30px;
     box-shadow: inset;
 
     height: 50px;
     width: 80px;
-    
+
 }
-.newSignUp{
+
+.newSignUp {
     margin-left: 20%;
-    color:rgb(205, 107, 50);
+    color: rgb(205, 107, 50);
+    cursor: pointer;
+
 }

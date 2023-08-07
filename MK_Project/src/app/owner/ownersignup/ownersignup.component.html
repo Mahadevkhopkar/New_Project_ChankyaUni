@@ -31,12 +31,12 @@
         <mat-card-title>
           <mat-form-field class="example-full-width ">
             <mat-label>Password</mat-label>
-            <input matInput placeholder="enter Password" formControlName='password' (keyup)="password()">
+            <input matInput placeholder="enter Password" formControlName='password' >
             <mat-error *ngIf="signUp.get('password')?.hasError('required')">password required</mat-error>
           </mat-form-field></mat-card-title> &nbsp;
         <mat-card-title><mat-form-field class="example-full-width ">
             <mat-label>ConfirmPassword</mat-label>
-            <input matInput placeholder="enter ConfirmPassword" formControlName='confimpassword' (keyup)="confirmPassword()">
+            <input matInput placeholder="enter ConfirmPassword" formControlName='confimpassword' >
             <mat-error *ngIf="signUp.get('confimpassword')?.hasError('required')">password required</mat-error>
             <mat-error *ngIf="signUp.get('confimpassword')?.hasError?.('isMatch')">password not match</mat-error>
           </mat-form-field></mat-card-title>

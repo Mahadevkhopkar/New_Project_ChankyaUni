@@ -16,7 +16,7 @@ export class OwnersuccesspageComponent {
   data: any;
   showdata: any
 
-  tableData: any[] = ['Name', 'LastName', 'Address', 'ChooseHotel', 'RoomAvailable', 'Menu', 'Payment'];
+  tableData: any[] = ['Name', 'LastName', 'Address', 'ChooseHotel', 'RoomAvailable', 'Menu', 'Payment','delete','edit'];
   searchboxval: any;
 
   constructor(private router: Router, private commonApiService: CommonApiService, private tosterservice: ToastrService) { }
@@ -52,6 +52,18 @@ export class OwnersuccesspageComponent {
     })
     this.showdata = !this.showdata;
 this.tosterservice.success('data showed')
+
+  }
+  list(){
+    this.router.navigateByUrl('owner/hotelList')
+  }
+
+  async delete( id:number){
+    await this.commonApiService.detete('Bookingdataview',id).toPromise()
+    this.showdata = !this.showdata;
+    this.bookingdetails()
+  }
+  edit(){
 
   }
 

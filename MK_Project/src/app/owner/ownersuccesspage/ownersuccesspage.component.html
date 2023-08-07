@@ -1,15 +1,21 @@
 <div Class="successpage">
 
 <button mat-raised-button color="primary" (click)="book()">Hotel Booking</button>&nbsp;
-<button mat-raised-button color="accent">Hotel Details</button>
+<button mat-raised-button color="accent" (click)="list()">Word Hotel List</button>
 <button mat-raised-button (click)="bookingdetails()" color="warn">Booking Details</button>
-<div *ngIf="showdata" >
-    <div *ngIf="bookingGetData" class="table-container">
-        <table>
+<div *ngIf="showdata" class="table-container">
+    
+        <table  *ngIf="bookingGetData.length > 0 && showdata">
             <tr>
-                <th *ngFor='let heading of tableData'>{{heading}}
-
-                </th>
+                <th>Name</th>
+                <th>LastName</th>
+                <th>Address</th>
+                <th>ChooseHotel</th>
+                <th>RoomAvailable</th>
+                <th>Menu</th>
+                <th>Payment</th>
+                <th>delete</th>
+                <th>edit</th>
             <tr *ngFor=" let tableData of bookingGetData">
                 <td>{{tableData.Name}}</td>
                 <td>{{tableData.lastName}}</td>
@@ -18,9 +24,10 @@
                 <td>{{tableData.RoomAvailable}}</td>
                 <td>{{tableData.Menu}}</td>
                 <td>{{tableData.Payment}}</td>
+                <td><mat-icon (click)="delete(tableData.id)">delete</mat-icon></td>
+                <td><mat-icon >mode_edit</mat-icon></td>
             </tr>
 
         </table>
     </div>
     </div>
-</div>

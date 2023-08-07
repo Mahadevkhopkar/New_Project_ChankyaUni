@@ -12,11 +12,15 @@ import { CommonserviceService } from 'src/app/common/commonservice.service';
 })
 export class OwnerComponent {
   loginForm!: FormGroup;
+  forgotForm!: FormGroup;
   endpoint!: string;
   owenerData: any;
   showform: any;
-  hide: boolean = true
-  validUser: boolean = false
+  hide: boolean = true;
+  validUser: boolean = false;
+  updatedata!: any;
+  forgotPasswordData: boolean = false
+  userName!: string;
   constructor(private router: Router,
     private commonservice: CommonserviceService,
     private commonApiService: CommonApiService, private formbuilder: FormBuilder, private toastrservice: ToastrService) { }
@@ -26,7 +30,7 @@ export class OwnerComponent {
     console.log('endpoint', this.endpoint);
 
     this.loginFormdetails();
-
+    // this.updatePassword();
   }
 
 
@@ -84,14 +88,44 @@ export class OwnerComponent {
     // this.showform = this.showform
     this.router.navigateByUrl('landing')
   }
-forgotPassword(){
-  this.loginForm=this.formbuilder.group({
-    password:[],
-    confirmPassword:[]
-  })
-}
-submitbutton(){
+  forgotPassword() {
+    this.forgotForm = this.formbuilder.group({
+      NewPassword: [],
+      confirmNewPassword: []
+    })
+
+  }
+  submitbutton() {}
+  //   if (this.owenerData) {
+  //     this.updatePassword();
+  //   }
+  //   else {
+  //     this.getowenerApidata();
+  //     this.updatePassword();
+  //   }
+  //   this.forgotPasswordData = !this.forgotPasswordData
+
+
+  // }
+  forgotpassworddetails() {
+    this.forgotPasswordData = !this.forgotPasswordData
+    this.forgotPassword()
+  }
+  // updatePassword() {
+  //   var user: any;
+  //   this.owenerData.forEach((data: any) => {
+  //     if (data.UserName === this.userName) {
+  //       user = data;
+  //     }
+  //   })
+  //   if (user) {
+  //     let request = {
+  //       Password: this.forgotForm.value.NewPassword
+  //     }
+  //      this.commonApiService.patchApi(this.endpoint, request, user.id).subscribe(data=>{
+  //       this.owenerData=data
+  //      })
+  //   }
+  // }
 
 }
-}
-
