@@ -40,6 +40,26 @@
       "City": "",
       "Gender": "",
       "id": 4
+    },
+    {
+      "UserName": "",
+      "PanNumber": "",
+      "Password": "",
+      "MobNumber": "",
+      "Email": "",
+      "City": "",
+      "Gender": "",
+      "id": 5
+    },
+    {
+      "UserName": "kajal",
+      "PanNumber": "nhjkf5600l",
+      "Password": "kajal123",
+      "MobNumber": "6789900098",
+      "Email": "kajal@gmail.com",
+      "City": "chandrapur",
+      "Gender": "female",
+      "id": 6
     }
   ],
   "user": [],
@@ -54,7 +74,6 @@
       "Payment": "AmezonPay",
       "id": 1
     },
-    
     {
       "Name": "sagar",
       "lastName": "khopkar",

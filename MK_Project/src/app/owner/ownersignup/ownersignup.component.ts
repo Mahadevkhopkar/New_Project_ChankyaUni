@@ -13,7 +13,6 @@ export class OwnersignupComponent {
 
   //   showdata:any;
   signUp!: FormGroup;
-  journey: any
   postapirespo: any;
   // passwordValue: any;
   // isMatch: boolean=false;
@@ -29,9 +28,10 @@ export class OwnersignupComponent {
     private commonapiservice: CommonApiService) { }
 
   ngOnInit() {
-    this.journey = this.commonservice.journey;
+   
     // console.log('b.......', this.journey);
     this.formdata();
+    
     // console.log('hhhhhh', this.formdata);
     // this.isMatch=this.signUp.value
     // this.Validators= this.passwordMatchValidator
@@ -48,7 +48,6 @@ export class OwnersignupComponent {
       username: ['', [Validators.pattern("[a-zA-Z]*")]],
       panNumber: ['', [Validators.pattern("[a-zA-Z0-9]*$"), Validators.minLength(10), Validators.maxLength(10)]],
       password: ['', [Validators.required]],
-      confimpassword: ['', [Validators.required,]],
       mobnumber: ['', [Validators.pattern("[0-9]*$"), Validators.minLength(10), Validators.maxLength(10)]],
       email: ['', [Validators.required, Validators.email, Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
       city: [''],
@@ -58,22 +57,23 @@ export class OwnersignupComponent {
 
   }
 
+
   submitdata() {
     let request = {
       UserName: this.signUp.value.username,
       PanNumber: this.signUp.value.panNumber,
       Password: this.signUp.value.password,
-      ConfirmPassword: this.signUp.value.confirmpassword,
       MobNumber: this.signUp.value.mobnumber,
       Email: this.signUp.value.email,
       City: this.signUp.value.city,
       Gender: this.signUp.value.gender,
-
-
-
+      
     }
+    
+    
     console.log(request);
-    this.commonapiservice.postApicall(this.journey, request).subscribe(result => {
+    let endPoint='owner'
+    this.commonapiservice.postApicall(endPoint, request).subscribe(result => {
       console.log('g.....', result);
       this.postapirespo = result
 

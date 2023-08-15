@@ -21,15 +21,17 @@
 
 .example-form {
     min-width: 150px;
-    max-width: 250px;
+    max-width: 485px;
     height: auto;
-    margin-left: 60%;
+    margin-left: 30%;
     background-color: aqua;
+    height: auto;
     /* background-color:rgb(255, 192, 208) */
   }
   
   .example-full-width {
     width: auto;
+    
     /* margin-top: 20px 20px;
     margin-left: 6px 6px;
     /* margin-right: auto; */ 
@@ -41,10 +43,10 @@
   }
 
 .signupForm{
-    background-color: palegreen;
-    height: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: rgb(241, 251, 152);
+    height: 1000px;
+    width: auto;
+    
 }
 .signform{
     height: auto;
@@ -54,9 +56,9 @@
     margin-top: 10px;
     align-content: center;
 }
- form input{
+ /* form input{
     /* background-color: brown;
-} */}
+} */
 
 
 

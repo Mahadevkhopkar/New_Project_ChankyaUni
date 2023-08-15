@@ -16,17 +16,21 @@ export class CommonApiService {
     return this.httpclient.post(Url, data)
 
   }
-  getApicall(endpoint: string) {
-    let url = this.url + endpoint;
+  editApicall(endpoint: string,id:number) {
+    let url = id ? this.url + endpoint + '/'+ id : this.url + endpoint;
     return this.httpclient.get(url)
   }
   patchApi(endpoint: string, data: any, id: number) {
     let url = this.url + endpoint + '/' + id;
     return this.httpclient.patch(url, data)
   }
-  detete(endpoint: string, id: number) {
+  delete(endpoint: string, id: number) {
     let url = this.url + endpoint + '/' + id;
     return this.httpclient.delete(url)
+  }
+  getApicall(endPoint:string){
+  let url=this.url+endPoint
+  return this.httpclient.get(url)
   }
 
 }

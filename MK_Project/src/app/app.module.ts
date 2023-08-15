@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingComponent } from './landing/landing.component';
 import {MatCardModule} from '@angular/material/card';
 import { SharedModule } from './common/shared/shared.module';
+import { FilterPipe } from './filter.pipe';
+
+
 
 
 // import { OwnerModule } from './owner/owner.module';
@@ -15,7 +18,11 @@ import { SharedModule } from './common/shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent
+    LandingComponent,
+    FilterPipe,
+    
+   
+    
   ],
   imports: [
     BrowserModule,

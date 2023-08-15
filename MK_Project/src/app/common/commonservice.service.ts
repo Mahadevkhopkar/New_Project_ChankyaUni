@@ -4,8 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CommonserviceService {
-  journey!: string
- 
+  journey!: string;
+  id:any;
+  dataById:any;
   constructor( ) { }
 
 
